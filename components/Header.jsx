@@ -283,7 +283,7 @@ export default function Header() {
                   </a>
                 </div>
                 <a
-                  href={`https://wa.me/${(site.phone2 || "917900351111").replace(/[^0-9]/g, "")}`}
+                  href={`https://wa.me/${(site.phone2 || "9190124 03111").replace(/[^0-9]/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-1.5 font-bold text-[11px] flex items-center gap-1 shadow-sm transition"

@@ -9,7 +9,8 @@ export default async function AdminGallery() {
       <form action={addGallery} className="mt-6 max-w-2xl space-y-4 rounded-lg border border-line p-5">
         <div className="grid gap-4 sm:grid-cols-3">
           <div><label className="label">Type</label><select name="type" className="field"><option value="IMAGE">Image</option><option value="VIDEO">YouTube video</option></select></div>
-          <div className="sm:col-span-2"><label className="label">URL</label><input name="url" required className="field" placeholder="Image path or YouTube link" /></div>
+          <div><label className="label">Upload image</label><input name="imageFile" type="file" accept="image/avif,image/gif,image/jpeg,image/png,image/webp" className="field" /></div>
+          <div><label className="label">Image or video URL</label><input name="url" className="field" placeholder="Fallback image path or YouTube link" /></div>
         </div>
         <div><label className="label">Caption (optional)</label><input name="caption" className="field" /></div>
         <button className="btn-dark">Add</button>

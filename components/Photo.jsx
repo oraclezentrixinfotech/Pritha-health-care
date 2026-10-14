@@ -1,8 +1,8 @@
 // Shows the image if a src exists, otherwise a neutral placeholder block.
-export default function Photo({ src, alt = "", label, className = "" }) {
+export default function Photo({ src, alt = "", label, className = "", loading = "lazy" }) {
   if (src) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={src} alt={alt} loading="lazy" className={`object-cover ${className}`} />;
+    return <img src={src} alt={alt} loading={loading} className={`object-cover ${className}`} />;
   }
   return (
     <div

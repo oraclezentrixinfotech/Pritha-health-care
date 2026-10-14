@@ -32,6 +32,7 @@ Admin (`/admin`): dashboard + editable milestone counters, posts, home slider, g
 
 - Org name, contact, nav, service pages, awards, objectives: `lib/site.js`
 - Images: put files in `public/images/` and reference them as `/images/name.jpg` (in `lib/site.js` or from the admin forms). Empty image fields show a placeholder block.
+- Admin image uploads use Cloudinary. Set `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET` in `.env.local` for local development and in the deployment environment for production. Image URL fields remain available as a fallback; uploads accept JPEG, PNG, WebP, GIF, and AVIF up to 8 MB.
 - Colours / fonts: `tailwind.config.js`, `app/layout.jsx`
 - Legal pages: replace the placeholder text with the organisation's real policies.
 

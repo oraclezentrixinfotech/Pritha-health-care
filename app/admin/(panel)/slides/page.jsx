@@ -9,7 +9,8 @@ export default async function AdminSlides() {
       <form action={createSlide} className="mt-6 max-w-2xl space-y-4 rounded-lg border border-line p-5">
         <div><label className="label">Heading</label><input name="title" required className="field" /></div>
         <div className="grid gap-4 sm:grid-cols-3">
-          <div className="sm:col-span-2"><label className="label">Image URL</label><input name="image" className="field" placeholder="/images/slide1.jpg" /></div>
+          <div><label className="label">Upload image</label><input name="imageFile" type="file" accept="image/avif,image/gif,image/jpeg,image/png,image/webp" className="field" /></div>
+          <div><label className="label">Image URL fallback</label><input name="image" className="field" placeholder="/images/slide1.jpg" /></div>
           <div><label className="label">Order</label><input name="position" type="number" defaultValue={slides.length + 1} className="field" /></div>
         </div>
         <div><label className="label">Link (optional)</label><input name="link" className="field" placeholder="/eyecare" /></div>

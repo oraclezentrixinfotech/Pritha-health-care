@@ -3,6 +3,21 @@
 import { useState, useEffect, useCallback } from "react";
 import Photo from "@/components/Photo";
 
+function getGalleryThumbnailUrl(url) {
+  if (!url?.includes("res.cloudinary.com") || !url.includes("/image/upload/")) {
+    return url;
+  }
+
+  if (/\/image\/upload\/(?:[^/]*,)?(?:f_auto|q_auto|w_\d+)/.test(url)) {
+    return url;
+  }
+
+  return url.replace(
+    "/image/upload/",
+    "/image/upload/f_auto,q_auto,w_800,c_limit/"
+  );
+}
+
 export default function GalleryView({ initialItems = [] }) {
   const [activeCategory, setActiveCategory] = useState("All");
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -125,8 +140,9 @@ export default function GalleryView({ initialItems = [] }) {
             >
               <div className="relative overflow-hidden bg-slate-100">
                 <Photo
-                  src={g.url}
+                  src={getGalleryThumbnailUrl(g.url)}
                   alt={g.caption || "Pratha Health Care Gallery Photograph"}
+                  loading="eager"
                   className="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
 

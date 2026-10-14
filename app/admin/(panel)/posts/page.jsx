@@ -13,7 +13,8 @@ export default async function AdminPosts() {
         <div><label className="label">Short summary</label><input name="excerpt" required className="field" /></div>
         <div><label className="label">Content (blank line between paragraphs)</label><textarea name="content" rows={8} required className="field" /></div>
         <div className="grid gap-4 sm:grid-cols-2">
-          <div><label className="label">Image URL (optional)</label><input name="image" className="field" placeholder="/images/camp.jpg or https://..." /></div>
+          <div><label className="label">Upload image (optional)</label><input name="imageFile" type="file" accept="image/avif,image/gif,image/jpeg,image/png,image/webp" className="field" /></div>
+          <div><label className="label">Image URL fallback</label><input name="image" className="field" placeholder="/images/camp.jpg or https://..." /></div>
           <div><label className="label">Date</label><input name="postedAt" type="date" className="field" /></div>
         </div>
         <button className="btn-dark">Publish post</button>

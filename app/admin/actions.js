@@ -4,8 +4,8 @@ import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/auth";
 import { getImageUrlFromForm } from "@/lib/cloudinary";
 
-const str = (fd, k, n = 500) => String(fd.get(k) ? ? "").trim().slice(0, n);
-const int = (fd, k) => Number.parseInt(String(fd.get(k) ? ? ""), 10);
+const str = (fd, k, n = 500) => String(fd.get(k) ?? "").trim().slice(0, n);
+const int = (fd, k) => Number.parseInt(String(fd.get(k) ?? ""), 10);
 
 function done(...paths) {
     revalidatePath("/", "layout");

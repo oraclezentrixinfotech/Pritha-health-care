@@ -71,10 +71,19 @@ export default function Header() {
 
           {/* Right badge: 80G Tax Exemption & Govt Registration */}
           <div className="flex items-center gap-2 flex-shrink-0">
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/10 text-[10px] sm:text-[11px] font-semibold text-emerald-300 border border-white/10">
+            <a
+              href="https://res.cloudinary.com/irxsvxce/image/upload/v1792231897/WhatsApp_Image_2026-10-17_at_1.31.38_PM.jpg"
+              data-certificate-modal="true"
+              data-certificate-title="Certificate of Appreciation - Oracle Eye Hospital"
+              className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/10 hover:bg-emerald-500/20 text-[10px] sm:text-[11px] font-semibold text-emerald-300 hover:text-emerald-200 border border-white/10 hover:border-emerald-400/50 transition-all cursor-pointer"
+              title="Click to view Certificate"
+            >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span>80G Tax Exempted</span>
-            </span>
+              <svg className="w-2.5 h-2.5 ml-0.5 opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
             <span className="hidden sm:inline-block text-[11px] text-white/70">
               Regd. Charitable Trust
             </span>

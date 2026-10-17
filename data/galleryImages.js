@@ -1,10 +1,95 @@
 // Centralized repository of all gallery images for Pratha Health Care
-export const galleryImages = [{
-    id: "phc-img-1",
-    url: "https://res.cloudinary.com/irxsvxce/image/upload/v1791960449/pritha-health-care/gallery/asset-44206883adae9d709b152f47.jpg",
-    caption: "Pratha Health Care Medical Outreach & Eye Examination Camp",
-    category: "Camps & Outreach",
-},
+export const galleryImages = [
+    {
+        id: "phc-camp-2026-1",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231898/WhatsApp_Image_2026-10-17_at_1.33.33_PM.jpg",
+        caption: "Free Community Eye Examination Camp - Patient Vision Screening",
+        category: "Camps & Outreach",
+    },
+    {
+        id: "phc-camp-2026-2",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231899/WhatsApp_Image_2026-10-17_at_1.33.30_PM.jpg",
+        caption: "Medical Specialist Consulting Patients at Free Health Camp",
+        category: "Clinical Care",
+    },
+    {
+        id: "phc-camp-2026-3",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231899/WhatsApp_Image_2026-10-17_at_1.33.34_PM_1.jpg",
+        caption: "Comprehensive Ophthalmology Diagnostic Checkup",
+        category: "Eye Care",
+    },
+    {
+        id: "phc-camp-2026-4",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231899/WhatsApp_Image_2026-10-17_at_1.33.33_PM_1.jpg",
+        caption: "Patient Assessment and Pre-Operative Eye Evaluation",
+        category: "Eye Care",
+    },
+    {
+        id: "phc-camp-2026-5",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231899/WhatsApp_Image_2026-10-17_at_1.33.36_PM_2.jpg",
+        caption: "Doctor Conducting Clinical Eye Examination and Consultation",
+        category: "Clinical Care",
+    },
+    {
+        id: "phc-camp-2026-6",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231899/WhatsApp_Image_2026-10-17_at_1.33.42_PM.jpg",
+        caption: "Rural Outreach Camp - Elderly Beneficiary Vision Screening",
+        category: "Camps & Outreach",
+    },
+    {
+        id: "phc-camp-2026-7",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231900/WhatsApp_Image_2026-10-17_at_1.33.36_PM.jpg",
+        caption: "Clinical Ophthalmology Team in Session at Medical Camp",
+        category: "Clinical Care",
+    },
+    {
+        id: "phc-camp-2026-8",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231900/WhatsApp_Image_2026-10-17_at_1.33.49_PM_1.jpg",
+        caption: "Community Beneficiaries Receiving Health & Eye Care Consultation",
+        category: "Camps & Outreach",
+    },
+    {
+        id: "phc-camp-2026-9",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231897/WhatsApp_Image_2026-10-17_at_1.33.27_PM.jpg",
+        caption: "Free Cataract Screening and Diagnostic Session",
+        category: "Eye Care",
+    },
+    {
+        id: "phc-camp-2026-10",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231897/WhatsApp_Image_2026-10-17_at_1.33.17_PM_1.jpg",
+        caption: "Patient Registration and Vision Testing at Free Eye Camp",
+        category: "Camps & Outreach",
+    },
+    {
+        id: "phc-camp-2026-11",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231898/WhatsApp_Image_2026-10-17_at_1.33.50_PM.jpg",
+        caption: "Specialist Eye Doctor Examining Beneficiary with Ophthalmic Equipment",
+        category: "Clinical Care",
+    },
+    {
+        id: "phc-camp-2026-12",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231898/WhatsApp_Image_2026-10-17_at_1.33.53_PM.jpg",
+        caption: "Community Health Camp Team & Beneficiary Care Session",
+        category: "Camps & Outreach",
+    },
+    {
+        id: "phc-camp-2026-13",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231898/WhatsApp_Image_2026-10-17_at_1.33.56_PM_1.jpg",
+        caption: "Field Ophthalmology Examination for Rural Villagers",
+        category: "Eye Care",
+    },
+    {
+        id: "phc-camp-2026-14",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231898/WhatsApp_Image_2026-10-17_at_1.33.56_PM.jpg",
+        caption: "Free Medical Camp - Health Checkup & Medicine Distribution",
+        category: "Camps & Outreach",
+    },
+    {
+        id: "phc-img-1",
+        url: "https://res.cloudinary.com/irxsvxce/image/upload/v1791960449/pritha-health-care/gallery/asset-44206883adae9d709b152f47.jpg",
+        caption: "Pratha Health Care Medical Outreach & Eye Examination Camp",
+        category: "Camps & Outreach",
+    },
 {
     id: "phc-img-2",
 

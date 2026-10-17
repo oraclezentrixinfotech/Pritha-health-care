@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AosProvider from "@/components/AosProvider";
+import CertificateModal from "@/components/CertificateModal";
 import { site } from "@/lib/site";
 
 const display = Oswald({ subsets: ["latin"], variable: "--font-display", weight: ["400", "500", "600", "700"], display: "swap" });
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <CertificateModal />
       </body>
     </html>
   );

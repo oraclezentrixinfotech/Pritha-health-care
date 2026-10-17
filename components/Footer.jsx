@@ -72,7 +72,7 @@ export default function Footer() {
                   Associated With Oracle Eye Hospital, Moradabad, Uttar Pradesh
                 </span>
                 <a
-                  href="https://oracleeyehospital.com/"
+                  href="https://www.oracleeyehospital.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block transition-all hover:scale-105 hover:opacity-80"
@@ -81,7 +81,7 @@ export default function Footer() {
               </div>
               <div className="mt-1.5">
                 <a
-                  href="https://oracleeyehospital.com/"
+                  href="https://www.oracleeyehospital.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-semibold text-[#c54b8c] hover:underline transition-all"

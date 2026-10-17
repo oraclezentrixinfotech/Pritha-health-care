@@ -60,40 +60,49 @@ export default async function Home() {
       <section className="py-6 sm:py-8 bg-slate-50/90 border-b border-slate-200/80">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
-            <div
-              className="flex items-center gap-2.5 sm:gap-3.5 p-3 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group"
+            <a
+              href="https://res.cloudinary.com/irxsvxce/image/upload/v1792231897/WhatsApp_Image_2026-10-17_at_1.31.38_PM.jpg"
+              data-certificate-modal="true"
+              data-certificate-title="Certificate of Appreciation - Oracle Eye Hospital"
+              className="flex items-center gap-2.5 sm:gap-3.5 p-3 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md hover:border-blue-400 hover:bg-blue-50/20 transition-all group cursor-pointer"
               data-aos="fade-up"
               data-aos-delay="50"
+              title="Click to view Certificate"
             >
               <span className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-700 text-lg sm:text-xl font-bold flex-shrink-0 group-hover:scale-105 transition-transform">
                 🛡️
               </span>
               <div className="min-w-0">
                 <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400 truncate">Tax Exemption</p>
-                <p className="text-xs sm:text-sm font-bold text-[#122336] truncate">80G &amp; 12A Certified</p>
+                <p className="text-xs sm:text-sm font-bold text-[#122336] group-hover:text-blue-700 transition-colors truncate">80G &amp; 12A Certified</p>
                 <p className="text-[10px] sm:text-[11px] text-slate-500 truncate">50% IT Tax Deduction</p>
+                <p className="text-[10px] sm:text-[11px] text-blue-600 underline font-medium truncate">
+                  View Certificate
+                </p>
               </div>
-            </div>
+            </a>
 
-            <div
-              className="flex items-center gap-2.5 sm:gap-3.5 p-3 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md hover:border-red-200 transition-all group"
+            <a
+              href="https://www.oracleeyehospital.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 sm:gap-3.5 p-3 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md hover:border-red-400 hover:bg-red-50/20 transition-all group cursor-pointer"
               data-aos="fade-up"
               data-aos-delay="260"
+              title="Visit Oracle Eye Hospital (https://www.oracleeyehospital.com/)"
             >
               <span className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-red-50 text-red-700 text-lg sm:text-xl font-bold flex-shrink-0 group-hover:scale-105 transition-transform">
                 🏥
               </span>
               <div className="min-w-0">
                 <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400 truncate">Clinical Partner</p>
-                <p className="text-xs sm:text-sm font-bold text-[#122336] truncate">Oracle Eye Hospital</p>
+                <p className="text-xs sm:text-sm font-bold text-[#122336] group-hover:text-red-600 transition-colors truncate">Oracle Eye Hospital</p>
                 <p className="text-[10px] sm:text-[11px] text-slate-500 truncate">Moradabad, UP</p>
-                <p className="text-[10px] sm:text-[11px] text-blue-600 underline truncate">
-                  <Link href="/our-works/oracle-eye-hospital">
-                    View Details
-                  </Link>
+                <p className="text-[10px] sm:text-[11px] text-red-600 underline font-medium truncate">
+                  Visit Website ↗
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>

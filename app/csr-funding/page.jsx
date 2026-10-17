@@ -8,8 +8,8 @@ export const metadata = {
 };
 
 const csrCertifications = [
-  { title: "12A", status: "Certified / Approved", desc: "Tax exemption registration under Section 12A of the Income Tax Act." },
-  { title: "80G", status: "Certified / Approved", desc: "Tax deduction benefit under Section 80G for all corporate & individual donors." },
+  { title: "12A", status: "Certified / Approved", desc: "Tax exemption registration under Section 12A of the Income Tax Act.", certificateUrl: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231897/WhatsApp_Image_2026-10-17_at_1.31.38_PM.jpg" },
+  { title: "80G", status: "Certified / Approved", desc: "Tax deduction benefit under Section 80G for all corporate & individual donors.", certificateUrl: "https://res.cloudinary.com/irxsvxce/image/upload/v1792231897/WhatsApp_Image_2026-10-17_at_1.31.38_PM.jpg" },
   { title: "e-CSR Funding", status: "Registered", desc: "Eligible to receive direct Corporate Social Responsibility (CSR) funds under MCA guidelines." },
   { title: "FCRA", status: "Applied", desc: "Foreign Contribution Regulation Act registration application under process." },
 ];
@@ -54,6 +54,18 @@ export default function CsrFundingPage() {
                       </span>
                     </div>
                     <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                    {item.certificateUrl && (
+                      <div className="mt-4 pt-3 border-t border-slate-100">
+                        <a
+                          href={item.certificateUrl}
+                          data-certificate-modal="true"
+                          data-certificate-title={`${item.title} Certificate • Oracle Eye Hospital`}
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800 underline cursor-pointer"
+                        >
+                          📄 View Certificate 🔍
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}

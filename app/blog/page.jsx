@@ -21,6 +21,10 @@ export default function BlogPage() {
   });
 
   const featuredBlog = blogs[0];
+  const isDefaultView = selectedCategory === "All" && !searchQuery && Boolean(featuredBlog);
+  const gridBlogs = isDefaultView
+    ? filteredBlogs.filter((b) => b.id !== featuredBlog.id)
+    : filteredBlogs;
 
   return (
     <>
@@ -144,7 +148,7 @@ export default function BlogPage() {
           )}
 
           {/* Blog Cards Grid */}
-          {filteredBlogs.length === 0 ? (
+          {!isDefaultView && gridBlogs.length === 0 ? (
             <div className="text-center py-16 bg-white rounded-xl border border-slate-200 p-8 max-w-lg mx-auto">
               <span className="text-4xl">🔍</span>
               <h3 className="mt-3 font-display text-xl font-bold text-slate-800">No articles found</h3>
@@ -158,9 +162,9 @@ export default function BlogPage() {
                 Reset Filters
               </button>
             </div>
-          ) : (
+          ) : gridBlogs.length > 0 ? (
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {filteredBlogs.map((b, idx) => (
+              {gridBlogs.map((b, idx) => (
                 <article
                   key={b.id}
                   data-aos="fade-up"
@@ -224,7 +228,7 @@ export default function BlogPage() {
                 </article>
               ))}
             </div>
-          )}
+          ) : null}
 
           {/* Bottom Donate Banner */}
           <div

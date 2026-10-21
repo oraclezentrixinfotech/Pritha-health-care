@@ -153,35 +153,37 @@ export default function BlogDetailPage({ params }) {
               </div>
 
               {/* Recent Articles Card */}
-              <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
-                <h3 className="font-display text-lg font-bold text-[#122336] border-b border-slate-100 pb-3">
-                  Recent Stories
-                </h3>
-                <div className="mt-4 space-y-5">
-                  {recentBlogs.map((item) => (
-                    <article key={item.id} className="flex gap-3.5 items-start group">
-                      <div className="h-16 w-16 flex-shrink-0 rounded-lg overflow-hidden bg-slate-100">
-                        <Photo
-                          src={item.image}
-                          alt={item.title}
-                          className="h-full w-full object-cover group-hover:scale-105 transition"
-                        />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <span className="text-[10px] font-bold text-[#dc2626] uppercase tracking-wider">
-                          {item.category}
-                        </span>
-                        <h4 className="font-display text-xs sm:text-sm font-bold leading-snug text-[#122336] group-hover:text-[#dc2626] transition line-clamp-2 mt-0.5">
-                          <Link href={`/blog/${item.id}`}>
-                            {item.title}
-                          </Link>
-                        </h4>
-                        <time className="text-[10px] text-slate-400 mt-1 block">{item.date}</time>
-                      </div>
-                    </article>
-                  ))}
+              {recentBlogs.length > 0 && (
+                <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
+                  <h3 className="font-display text-lg font-bold text-[#122336] border-b border-slate-100 pb-3">
+                    Recent Stories
+                  </h3>
+                  <div className="mt-4 space-y-5">
+                    {recentBlogs.map((item) => (
+                      <article key={item.id} className="flex gap-3.5 items-start group">
+                        <div className="h-16 w-16 flex-shrink-0 rounded-lg overflow-hidden bg-slate-100">
+                          <Photo
+                            src={item.image}
+                            alt={item.title}
+                            className="h-full w-full object-cover group-hover:scale-105 transition"
+                          />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <span className="text-[10px] font-bold text-[#dc2626] uppercase tracking-wider">
+                            {item.category}
+                          </span>
+                          <h4 className="font-display text-xs sm:text-sm font-bold leading-snug text-[#122336] group-hover:text-[#dc2626] transition line-clamp-2 mt-0.5">
+                            <Link href={`/blog/${item.id}`}>
+                              {item.title}
+                            </Link>
+                          </h4>
+                          <time className="text-[10px] text-slate-400 mt-1 block">{item.date}</time>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
             </aside>
 

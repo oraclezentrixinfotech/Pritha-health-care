@@ -14,7 +14,7 @@ export const blogs = [
     id: 1,
     slug: "free-eye-checkup-camp-giants-group-bisauli-stars",
     title: "नि:शुल्क नेत्र जाँच शिविर – GIANTS Group of Bisauli Stars द्वारा",
-    excerpt: "GIANTS Group of Bisauli Stars द्वारा Oracle Eye Hospital के सहयोग से 16 अक्टूबर 2026 को निःशुल्क नेत्र जाँच शिविर का आयोजन किया जा रहा है। इस शिविर में मोतियाबिंद सर्जरी और सर्जरी के बाद दवाइयाँ भी मुफ्त उपलब्ध कराई जाएँगी। सभी के लिए यह एक स्वास्थ्य सेवा का महत्वपूर्ण अवसर है।",
+    excerpt: "GIANTS Group of Bisauli Stars द्वारा Oracle Eye Hospital के सहयोग से 16 अक्टूबर 2026 को निःशुल्क नेत्र जाँच शिविर का आयोजन किया गया। इस शिविर में मोतियाबिंद की सर्जरी और सर्जरी के बाद आवश्यक दवाइयाँ भी निःशुल्क उपलब्ध कराई गईं। यह शिविर लोगों को बेहतर नेत्र स्वास्थ्य सेवाएँ प्रदान करने की दिशा में एक महत्वपूर्ण पहल रही",
     category: "Health Camp",
     date: "October 16, 2026",
     postedAt: "2026-10-16T10:00:00.000Z",
@@ -26,7 +26,8 @@ export const blogs = [
     },
     image: "https://res.cloudinary.com/irxsvxce/image/upload/v1792564931/Community_Eye_Camp_Examination.png",
     tags: ["Health Camp", "Eye Camp", "Free Surgery", "Oracle Eye Hospital", "Bisauli"],
-    content: `GIANTS Group of Bisauli Stars द्वारा Oracle Eye Hospital के सहयोग से 16 अक्टूबर 2026 को निःशुल्क नेत्र जाँच शिविर का आयोजन किया जा रहा है।
+    content: `GIANTS Group of Bisauli Stars द्वारा Oracle Eye Hospital के सहयोग से 16 अक्टूबर 2026 को निःशुल्क नेत्र जाँच शिविर का आयोजन किया गया। इस शिविर में मोतियाबिंद की सर्जरी और सर्जरी के बाद आवश्यक दवाइयाँ भी निःशुल्क उपलब्ध कराई गईं। यह शिविर लोगों को बेहतर नेत्र स्वास्थ्य सेवाएँ प्रदान करने की दिशा में एक महत्वपूर्ण पहल रही।
+जा रहा है।
 
 शिविर विवरण:
 • तारीख: 16 अक्टूबर 2026

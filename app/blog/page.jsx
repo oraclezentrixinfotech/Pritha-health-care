@@ -20,12 +20,6 @@ export default function BlogPage() {
     return matchesCategory && matchesSearch;
   });
 
-  const featuredBlog = blogs[0];
-  const isDefaultView = selectedCategory === "All" && !searchQuery && Boolean(featuredBlog);
-  const gridBlogs = isDefaultView
-    ? filteredBlogs.filter((b) => b.id !== featuredBlog.id)
-    : filteredBlogs;
-
   return (
     <>
       <PageBanner title="News & Articles" parent="Media" />
@@ -91,64 +85,8 @@ export default function BlogPage() {
             </div>
           </div>
 
-          {/* Featured Post (only show if 'All' category and no active search) */}
-          {selectedCategory === "All" && !searchQuery && featuredBlog && (
-            <div className="mb-14" data-aos="fade-up" data-aos-delay="150">
-              <div className="relative overflow-hidden rounded-2xl bg-white shadow-md border border-slate-200/80 transition hover:shadow-xl lg:grid lg:grid-cols-12 lg:gap-8 items-center">
-                <div className="lg:col-span-7 h-72 sm:h-96 lg:h-full relative overflow-hidden bg-slate-100">
-                  <Photo
-                    src={featuredBlog.image}
-                    alt={featuredBlog.title}
-                    className="h-full w-full object-cover transition duration-700 hover:scale-105"
-                  />
-                  <span className="absolute top-4 left-4 rounded-full bg-[#dc2626] px-3 py-1 text-xs font-bold text-white uppercase tracking-wider shadow">
-                    Featured Story
-                  </span>
-                </div>
-                <div className="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between h-full">
-                  <div>
-                    <div className="flex items-center gap-3 text-xs text-slate-500 mb-2">
-                      <span className="font-semibold text-[#dc2626]">{featuredBlog.category}</span>
-                      <span>•</span>
-                      <span>{featuredBlog.readTime}</span>
-                      <span>•</span>
-                      <span>{featuredBlog.date}</span>
-                    </div>
-                    <h2 className="font-display text-2xl sm:text-3xl font-bold leading-snug text-[#122336] hover:text-[#dc2626] transition">
-                      <Link href={`/blog/${featuredBlog.id}`}>
-                        {featuredBlog.title}
-                      </Link>
-                    </h2>
-                    <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-600 line-clamp-3 font-body">
-                      {featuredBlog.excerpt}
-                    </p>
-                  </div>
-
-                  <div className="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="h-9 w-9 rounded-full bg-[#122336] text-white flex items-center justify-center font-bold text-sm">
-                        {featuredBlog.author.name.charAt(0)}
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold text-slate-800 leading-none">{featuredBlog.author.name}</p>
-                        <p className="text-[11px] text-slate-500 mt-0.5">{featuredBlog.author.role}</p>
-                      </div>
-                    </div>
-                    <Link
-                      href={`/blog/${featuredBlog.id}`}
-                      className="inline-flex items-center gap-1.5 text-sm font-bold text-[#dc2626] hover:text-[#b91c1c] transition group"
-                    >
-                      Read Story
-                      <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
           {/* Blog Cards Grid */}
-          {!isDefaultView && gridBlogs.length === 0 ? (
+          {filteredBlogs.length === 0 ? (
             <div className="text-center py-16 bg-white rounded-xl border border-slate-200 p-8 max-w-lg mx-auto">
               <span className="text-4xl">🔍</span>
               <h3 className="mt-3 font-display text-xl font-bold text-slate-800">No articles found</h3>
@@ -162,9 +100,9 @@ export default function BlogPage() {
                 Reset Filters
               </button>
             </div>
-          ) : gridBlogs.length > 0 ? (
+          ) : (
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {gridBlogs.map((b, idx) => (
+              {filteredBlogs.map((b, idx) => (
                 <article
                   key={b.id}
                   data-aos="fade-up"
@@ -228,7 +166,7 @@ export default function BlogPage() {
                 </article>
               ))}
             </div>
-          ) : null}
+          )}
 
           {/* Bottom Donate Banner */}
           <div

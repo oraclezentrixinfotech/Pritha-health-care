@@ -4,11 +4,10 @@ import PageBanner from "@/components/PageBanner";
 import Photo from "@/components/Photo";
 import { getBlogBySlug, getRecentBlogs, blogs } from "@/data/blogs";
 
-export const dynamic = "force-dynamic";
-
 export function generateStaticParams() {
   return blogs.map((b) => ({ id: String(b.id) }));
 }
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }) {
   const p = getBlogBySlug(params.id);
